@@ -204,6 +204,24 @@ header{
 
 }
 
+.no_hay_producto {
+    max-width: 83rem;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    background-color:rgb(240, 240, 240) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.no_hay_producto svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+
 
 /*SECCION DEL FORMULARIO*/
 
