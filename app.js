@@ -2,6 +2,7 @@ let inputModelo = document.getElementById('modelo_form')
 let inputMarca = document.getElementById('marca_form')
 let inputPrecio = document.getElementById('precio_form')
 let inputUrl = document.getElementById('urlImg_form')
+
  //Para Mostrar el Formulario-----------------------------------------------------------------------------------------
  function mostrarform(opcion){
      const form = document.getElementById('form_container');
@@ -40,15 +41,17 @@ class objeto {
     }
 }
 let producto = []
+
 function agergarProducto(){
-    let obj = new objeto (inputModelo.value , inputMarca.value , inputPrecio.value , inputUrl.value)
     let resultIndex = producto.findIndex(function(item){ 
         return item.modelo.toLowerCase() === inputModelo.value.toLowerCase()
     })
-        if(resultIndex === -1){
+    
+        if(resultIndex === -1 ){
+            let obj = new objeto (inputModelo.value , inputMarca.value , inputPrecio.value , inputUrl.value)
             producto.push(obj)
             localStorage.setItem('productos' , JSON.stringify(producto))
-            imprimirArticuloEnPagina(producto)
+            renderItem(producto)
             mostrarform('cerrar')
         } else{
             mostrarform('cerrar')
@@ -63,9 +66,9 @@ function agergarProducto(){
         }
 } 
 //Para Imprimir los ITEMS-----------------------------------------------------------------------------------------
-function imprimirArticuloEnPagina(arregloAImprimir){
+function renderItem(arregloAImprimir){
     const lugar = document.getElementById('lugarItem')
-    if (producto.length !== 0){
+    if (arregloAImprimir.length > 0){
         lugar.innerHTML = ''
         arregloAImprimir.forEach( function (item) {
             lugar.innerHTML += ` <div class="producto" id = "${item.id}">
@@ -105,11 +108,14 @@ function imprimirArticuloEnPagina(arregloAImprimir){
 //Para eliminar los ITEMS-----------------------------------------------------------------------------------------
 
 function traerDelLocalStorage() {
-    let arregloLocalStorage = localStorage.getItem('productos')
-    let arregloParse = JSON.parse(arregloLocalStorage)
-    producto = arregloParse
-    imprimirArticuloEnPagina(producto)
     
+        let arregloLocalStorage = JSON.parse(localStorage.getItem('productos'))
+        if(arregloLocalStorage === null){
+            producto = []
+        }else {
+            producto = arregloLocalStorage
+        renderItem(producto)
+        }
 }
 
 traerDelLocalStorage()
@@ -120,7 +126,7 @@ function eliminarItem (arreglo,modelo,marca) {
         if( item.modelo === modelo && item.marca === marca ) {
             arreglo.splice( index,1 )
             localStorage.setItem('productos' , JSON.stringify(producto))
-            imprimirArticuloEnPagina( producto )
+            renderItem( producto )
         }
     })
 }
@@ -130,7 +136,7 @@ let buscador = document.getElementById('buscador')
     buscador.addEventListener('change', () => {
         let valorBuscador = document.getElementById('buscador').value
         const productoFiltro = producto.filter( function (item) {return item.modelo == valorBuscador || item.marca == valorBuscador})
-        imprimirArticuloEnPagina(productoFiltro)
+        renderItem(productoFiltro)
     })
 //Para Editar los ITEMS-----------------------------------------------------------------------------------------
 function editarItem (arreglo,modelo,marca) {
@@ -141,11 +147,9 @@ function editarItem (arreglo,modelo,marca) {
                   btnEditarForm.onclick = function(){                     
                     let objEditar = new objeto(inputModelo.value , inputMarca.value , inputPrecio.value , inputUrl.value);
                      producto.splice(index,1,objEditar);
-                     imprimirArticuloEnPagina( producto );
+                     renderItem( producto );
                      mostrarform('cerrar');
                     }
         }
     }) 
 }
-
-
