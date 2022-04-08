@@ -25,7 +25,7 @@
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                 </svg>
                 <input type="text" id="buscador" class="buscador" placeholder="Buscar">
-                <a href="#" id="btn_list" onclick="renderItem(producto)">
+                <a href="#" id="btn_list">
                     <svg class="list" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                     </svg>
@@ -56,13 +56,9 @@
                              <h3>Precio</h3>
                              <input type="number"  required min="0" placeholder="Precio" id="precio_form" class="precio_form datos">
                        </div>
-                       <div class="Form_container_datos_urlImg">
-                             <h3>Url de imagen</h3>
-                             <input type="text"  placeholder="URL" id="urlImg_form" class="urlImg_form datos">
-                       </div>
                        <div class="form_container_buttom">
                              <a href="#" id="agregar_form"  class="agregar_form" onclick="agergarProducto()">Agregar</a>
-                             <a href="#" id="editar_form" class="editar_form "  >Editar</a>
+                             <a href="#" id="editar_form" class="editar_form ">Editar</a>
                        </div>
                     </div>
                 </form>
@@ -81,4 +77,28 @@
     </main>
     <script src="./app.js"></script>
 </body>
+<footer>
+    <div class="footer-container">
+        <div class="footer_redessociales">
+            <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                </svg>
+            </a>
+            <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
+                </svg>
+            </a>
+            <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="copyrigth">
+            <p>Copyrigth 2022 By: Luis Arista Derechos reservados </p>
+        </div>
+    </div>
+</footer>
 </html>
