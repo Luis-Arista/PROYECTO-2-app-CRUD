@@ -229,7 +229,7 @@ header{
     align-items: flex-end;
     flex-direction: column;
     top: 180px;
-    background-color: #f7e8e8;
+    background-color: #f1eaea;
     box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
                 -3px -3px 5px  rgb(255, 255, 255);
   
@@ -289,7 +289,7 @@ header{
     width: 95%;
     height: 30px;
     outline: none;
-    background-color: #f7e8e8;
+    background-color: #f1eaea;
     box-shadow: inset 3px 3px 7px  rgba(17, 17, 17, 0.15),
                 inset -3px -3px 5px  rgb(255, 255, 255);
 }
@@ -305,7 +305,6 @@ header{
     border: 0px ;
     padding: 10px 20px;
     text-decoration: none;
-    background-color: #f7e8e8;
     box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
                 -3px -3px 5px  rgb(255, 255, 255);
     
@@ -367,7 +366,7 @@ header{
     top: 200px;
     transform: scale(0);
     transition: all 0.3s ease;
-    background-color: #f7e8e8;
+    background-color: #f1eaea;
     box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
                 -3px -3px 5px  rgb(255, 255, 255);
 
@@ -426,6 +425,7 @@ footer{
     margin: 0 5px;
     padding: 10px;
     border-radius: 50%;
+    color: #ffff;
     background-color: #00133f;
     box-shadow:   3px 3px 7px #000613,
                     -3px -3px 5px #001e63;
@@ -433,6 +433,7 @@ footer{
 }
 
 .footer_redessociales a:active{
+    color: rgb(199, 199, 199);
     background-color: #00133f;
     box-shadow:  inset 3px 3px 7px #000613,
                  inset   -3px -3px 5px #001e63;
@@ -441,7 +442,6 @@ footer{
 .footer_redessociales a svg{
     width: 100%;
     height: 30px;
-    color: #ffff;
 }
 
 .copyrigth{
