@@ -81,6 +81,7 @@ header{
     height: 40px;
     outline: none;
     margin-right: 15px;
+    -webkit-appearance: none;
     color: white;
     background-color: #FF8C32;
     box-shadow: inset 3px 3px 7px  #d9772b,
