@@ -32,12 +32,19 @@ function alertas(valor,accion) {
             let lugarAlert = document.getElementById('alert_container_info')
             let nodoAlert = document.createElement ('h3')
             let estatus;
+            let mensaje;
             if  (accion === 'agregar') {
                 estatus = 'ya existe'
+                mensaje = 'El elemento:'
             } else if (accion === 'buscar') {
                 estatus = 'no existe'
+                mensaje = 'El elemento:'
+            } else if(accion === 'llenarCampos'){
+                estatus ='todos los campos'
+                mensaje = 'Por favor'
+
             }
-            let textAlert = document.createTextNode(`El elemento: ${valor}, ${estatus}`)
+            let textAlert = document.createTextNode(`${mensaje} ${valor} ${estatus}`)
                 lugarAlert.innerHTML=''
                 nodoAlert.appendChild(textAlert)
                 lugarAlert.appendChild(nodoAlert)
@@ -52,19 +59,24 @@ class objeto {
 }
 
 function agergarProducto(){
-    let resultIndex = producto.findIndex(function(item){ 
-        return item.modelo.toLowerCase() === inputModelo.value.toLowerCase()
-    })
-        if(resultIndex === -1 ){
-            let obj = new objeto (inputModelo.value , inputMarca.value , inputPrecio.value)
-            producto.push(obj)
-            localStorage.setItem('productos' , JSON.stringify(producto))
-            renderItem(producto)
-            mostrarform('cerrar')
-        } else{
-            mostrarform('cerrar')
-            alertas(inputModelo.value , 'agregar')
-        }
+    if(inputModelo.value && inputMarca.value && inputPrecio.value !== ''){
+        let resultIndex = producto.findIndex(function(item){ 
+            return item.modelo.toLowerCase() === inputModelo.value.toLowerCase()
+        })
+            if(resultIndex === -1 ){
+                let obj = new objeto (inputModelo.value , inputMarca.value , inputPrecio.value)
+                producto.push(obj)
+                localStorage.setItem('productos' , JSON.stringify(producto))
+                renderItem(producto)
+                mostrarform('cerrar')
+            } else{
+                mostrarform('cerrar')
+                alertas(inputModelo.value , 'agregar')
+            }
+    }else{
+        alertas('llene','llenarCampos')
+    }
+    
 } 
 //Para Imprimir los ITEMS-----------------------------------------------------------------------------------------
 function renderItem(arregloAImprimir){
