@@ -1,12 +1,12 @@
 body{
     margin: 0;
     font-family: sans-serif;
-    background-color: #f1eaea;
+    background-color: #DDDDDD;
 
 }
 
 header{
-    background-color: #76d1d0;
+    background-color: #FF8C32;
 }
 
 .header_container{
@@ -36,18 +36,18 @@ header{
     padding: 3px 10px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #76d1d0;
-    box-shadow:  3px 3px 7px  #64b2b1,
-                -3px -3px 5px  #88f0ef;
+    background-color: #FF8C32;
+    box-shadow:  3px 3px 7px  #d9772b,
+                -3px -3px 5px  #fda84c;
 }
 
 .header_container_buttom button:active{
-    box-shadow:  inset 3px 3px 7px  #64b2b1,
-                 inset   -3px -3px 5px  #88f0ef;}
+    box-shadow:  inset 3px 3px 7px  #d9772b,
+                 inset   -3px -3px 5px  #fda84c;}
 
 /*SECCION DEL BUSCADOR*/
 .section_buscador{
-    background-color: #8badd9;
+    background-color: #FF8C32;
 }
 
 
@@ -58,7 +58,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 15px;
 }
 
 .lupa{
@@ -67,14 +67,14 @@ header{
     padding: 10px;
     fill: white;
     border-radius: 5px 0px 0 5px;
-    background-color: #8badd9;
-    box-shadow: inset 3px 3px 7px  #7693b8,
-                inset -3px -3px 5px  #a0c7fa;
+    background-color: #FF8C32;
+    box-shadow: inset 3px 3px 7px  #d9772b,
+                inset -3px -3px 5px  #fda84c;
 }
 
 .buscador{
     border: none;
-    padding: 5px;
+    padding: 5px 10px;
     font-size: 15px;
     border-radius: 0px 5px 5px 0px;
     width:50%;
@@ -82,10 +82,9 @@ header{
     outline: none;
     margin-right: 15px;
     color: white;
-    background-color: #8badd9;
-    -webkit-appearance: none;
-    box-shadow: inset 3px 3px 7px  #7693b8,
-                inset -3px -3px 5px  #a0c7fa;
+    background-color: #FF8C32;
+    box-shadow: inset 3px 3px 7px  #d9772b,
+                inset -3px -3px 5px  #fda84c;
 }
 
 .buscador::placeholder{
@@ -101,9 +100,9 @@ header{
     padding: 9px;
     color: white;
     border-radius: 5px;
-    background-color: #8badd9;
-    box-shadow:  3px 3px 7px  #7693b8,
-                 -3px -3px 5px  #a0c7fa;
+    background-color: #FF8C32;
+    box-shadow:  3px 3px 7px  #d9772b,
+                -3px -3px 5px  #fda84c;
 }
 #btn_list svg {
     height: 30px;
@@ -114,9 +113,9 @@ header{
     background-color: #bfd7ea;
     color: rgb(243, 243, 243);
     background-color: #fcdcbb;
-    background-color: #8badd9;
-    box-shadow: inset 3px 3px 7px  #7693b8,
-                inset -3px -3px 5px  #a0c7fa;
+    background-color: #FF8C32;
+    box-shadow: inset 3px 3px 7px  #d9772b,
+                inset -3px -3px 5px  #fda84c;
 
 }
 
@@ -134,9 +133,9 @@ header{
     width: 90%;
     padding: 20px 0px;
     margin: 10px auto;
-    background-color: #f1eaea;
-    box-shadow:  3px 3px 7px  #cfb8d9,
-                -3px -3px 5px  #fffaff;  
+    background-color: #DDDDDD;
+    box-shadow:  3px 3px 7px  #bcbcbc,
+                -3px -3px 5px  #fefefe;  
 }
 
 
@@ -158,39 +157,46 @@ header{
 
 
 
+
 #editar{
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 2px;
     margin-right: 15px;
-    color: rgb(0, 202, 0);
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow:  3px 3px 7px  #cfb8d9,
-                -3px -3px 5px  #fffaff; 
 }
 
-#editar:active{
+#editar svg{
+    padding: 10px 20px;
+    color: rgb(0, 202, 0);
+    border-radius: 5px;
+    box-shadow:  3px 3px 7px  #bcbcbc,
+                -3px -3px 5px  #fefefe;  
+
+
+}
+
+#editar svg:active{
     color: rgb(0, 179, 0);
-    box-shadow: inset  3px 3px 7px  #cfb8d9,
-                inset -3px -3px 5px  #fffaff; }
+    box-shadow: inset  3px 3px 7px  #bcbcbc,
+                inset -3px -3px 5px  #fefefe;  
+}
 
 #borrar{
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 2px;
-    color: red;
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow:  3px 3px 7px  #cfb8d9,
-                -3px -3px 5px  #fffaff;  
 }
 
-#borrar:active{
+#borrar svg{
+    padding: 10px 20px;
+    color: red;
+    border-radius: 5px;
+    box-shadow:  3px 3px 7px  #bcbcbc,
+                -3px -3px 5px  #fefefe;  
+}
+
+#borrar svg:active{
     color: rgb(218, 0, 0);
     background-color: #f3d9ff;
-    box-shadow:  inset 3px 3px 7px  #cfb8d9,
-                inset -3px -3px 5px  #fffaff; }
+    box-shadow: inset 3px 3px 7px  #bcbcbc,
+                inset -3px -3px 5px  #fefefe; 
+} 
 
 .no_hay_producto {
     max-width: 83rem;
@@ -202,9 +208,9 @@ header{
     align-items: center;
     justify-content: center;
     padding: 10px;    
-    background-color: #f1eaea;
-    box-shadow: inset 3px 3px 7px  #cfb8d9,
-                inset -3px -3px 5px  #fffaff; 
+    background-color: #DDDDDD;
+    box-shadow: inset 3px 3px 7px  #bcbcbc,
+                inset -3px -3px 5px  #fefefe;  
 
 }
 .no_hay_producto svg {
@@ -226,18 +232,17 @@ header{
 
 .form_container{
     border-radius: 5px;
-    position: fixed;
+    position: absolute;
     margin: 0 10px;
     padding: 15px;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
     flex-direction: column;
-    top: 180px;
+    top: 200px;
     background-color: #f1eaea;
     box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
-                -3px -3px 5px  rgb(255, 255, 255);
-  
+                -3px -3px 5px  rgb(255, 255, 255);  
     transform: scale(0);
     transition: all 0.3s ease;
 }
@@ -255,14 +260,11 @@ header{
     border-radius: 5px;
     box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
                 -3px -3px 5px  rgb(255, 255, 255);
-
 }
 
 .form_container_cerrar a:active{
     box-shadow: inset 3px 3px 7px  rgba(17, 17, 17, 0.15),
-                inset -3px -3px 5px  rgb(255, 255, 255);
-
-}
+                inset -3px -3px 5px  rgb(255, 255, 255);}
 
 
 .form_container_datos{
@@ -297,8 +299,7 @@ header{
     -webkit-appearance: none;
     background-color: #f1eaea;
     box-shadow: inset 3px 3px 7px  rgba(17, 17, 17, 0.15),
-                inset -3px -3px 5px  rgb(255, 255, 255);
-}
+                inset -3px -3px 5px  rgb(255, 255, 255);}
 
 .form_container_buttom{
     width: 90%;
@@ -312,8 +313,7 @@ header{
     padding: 10px 20px;
     text-decoration: none;
     box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
-                -3px -3px 5px  rgb(255, 255, 255);
-    
+                -3px -3px 5px  rgb(255, 255, 255);    
 }
 
 .agregar_form_novisto{
@@ -323,8 +323,7 @@ header{
 .agregar_form:active{
     color: #086a75;
     box-shadow: inset 3px 3px 7px  rgba(17, 17, 17, 0.15),
-               inset -3px -3px 5px  rgb(255, 255, 255);
-}
+                inset -3px -3px 5px  rgb(255, 255, 255);}
 
 .editar_form{
     color: #088b1e;
@@ -335,7 +334,6 @@ header{
     display: none;
     box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
                 -3px -3px 5px  rgb(255, 255, 255);
-
 }
 
 .editar_form_visto{
@@ -345,7 +343,6 @@ header{
 .editar_form:active{
     box-shadow: inset 3px 3px 7px  rgba(17, 17, 17, 0.15),
                 inset -3px -3px 5px  rgb(255, 255, 255);
-
 }
 
 
@@ -359,7 +356,6 @@ header{
 }
 
 .alert_container{
-    box-shadow: 0px 0px 5px 0px black;
     border-radius: 5px;
     position: fixed;
     width: 50%;
@@ -375,7 +371,6 @@ header{
     background-color: #f1eaea;
     box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
                 -3px -3px 5px  rgb(255, 255, 255);
-
 }
 .alert_container_mostrar{
     transform: scale(1);
@@ -398,19 +393,17 @@ header{
     padding: 15px 30px ;
     border-radius: 5px;
     box-shadow:  3px 3px 7px  rgba(17, 17, 17, 0.15),
-    -3px -3px 5px  rgb(255, 255, 255);
-}
+                -3px -3px 5px  rgb(255, 255, 255);}
 
 .alert_container_boton a:active{
     box-shadow: inset 3px 3px 7px  rgba(17, 17, 17, 0.15),
-                inset -3px -3px 5px  rgb(255, 255, 255);
-}
+                inset -3px -3px 5px  rgb(255, 255, 255);}
 
 
 /*SECCION DEL FOOTER*/
 
 footer{
-    background-color: #00133f;
+    background-color: #06113C;
     position: relative;
     bottom: 0;
 }
@@ -434,17 +427,17 @@ footer{
     padding: 10px;
     border-radius: 50%;
     color: #ffff;
-    background-color: #00133f;
-    box-shadow:   3px 3px 7px #000613,
-                    -3px -3px 5px #001e63;
+    background-color: #06113C;
+    box-shadow:   3px 3px 7px #020511,
+                    -3px -3px 5px #0c216e;
     
 }
 
 .footer_redessociales a:active{
     color: rgb(199, 199, 199);
-    background-color: #00133f;
-    box-shadow:  inset 3px 3px 7px #000613,
-                 inset   -3px -3px 5px #001e63;
+    background-color: #06113C;
+    box-shadow:  inset  3px 3px 7px #020511,
+                 inset   -3px -3px 5px #0c216e;
 }
 
 .footer_redessociales a svg{
@@ -500,6 +493,12 @@ footer{
     .no_hay_producto {
         height: 700px;
     }
+
+      /* SECCION FORM CELULAR */
+
+      .form_container{
+        width: 80%;
+    }
 }
 
 @media (max-width: 600px){
@@ -514,22 +513,32 @@ footer{
 
     .producto_info_accion{
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         width: 90%;
         margin: 0 auto;
     }
 
-    #editar{
-        width: 100%;
+    #editar {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #editar svg{
+        width: 80%;
         margin-right: 0;
         margin-bottom: 15px;
+        
     }
     
+    #borrar {
+        width: 90%;
+        margin: 0 auto;
+    }
     
-    #borrar{
-        width: 100%;
+    #borrar svg{
+        width: 80%;
     }
 
     .no_hay_producto {
@@ -542,6 +551,7 @@ footer{
         height: 40px;
         margin: 4px;
     }
+
 
     /* SECCION ALERT CELULAR */
 
